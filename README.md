@@ -1,0 +1,2 @@
+# CookieRejector
+Automatically rejects cookies
