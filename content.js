@@ -4,8 +4,8 @@ function autoReject(){
 
     for (let btn of buttonList){
         let txt = btn.textContent.trim().toLowerCase();
-        let name = btn.name.toLowerCase();
-        if (rejectTexts.includes(txt) || rejectTexts.includes(name)){
+        const valid = rejectTexts.some(text => txt.includes(text.toLowerCase()))
+        if (valid){
             btn.click();
             console.log("rejected");
             break;
