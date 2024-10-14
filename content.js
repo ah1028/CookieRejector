@@ -11,6 +11,9 @@ function autoReject(){
             break;
         }
     }
+
+    // If can't find a reject, try options -> Save
+
 }
 
 window.addEventListener("load", autoReject);
