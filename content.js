@@ -1,6 +1,7 @@
 function autoReject(){
-    const rejectTexts = ["decline", "reject", "disagree", "decline"];
+    const rejectTexts = ["decline", "reject", "disagree", "decline", "options", "essential"];
     const buttonList = document.querySelectorAll("button");
+    let rejected = false;
 
     for (let btn of buttonList){
         let txt = btn.textContent.trim().toLowerCase();
@@ -8,11 +9,25 @@ function autoReject(){
         if (valid){
             btn.click();
             console.log("rejected");
+            rejected = true;
             break;
         }
     }
-
-    // If can't find a reject, try options -> Save
+/*
+    if (!rejected){
+        const buttonList1 = document.querySelectorAll("button");
+        console.log(buttonList1);
+        for (let btn of buttonList1){
+            let txt = btn.textContent.trim().toLowerCase();
+            console.log(txt);
+            /*if (txt == "options"){
+                btn.click();
+                console.log("options");
+                rejected = true;
+                break;
+            }
+        }
+    }*/
 
 }
 
