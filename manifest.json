@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Cookie Rejector",
+    "version": "1.0.0",
+    "description": "Says no to cookies",
+    "permissions": ["cookies", "activeTab", "webNavigation", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+        "service_worker": "background.js"
+    },"content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
